@@ -620,10 +620,10 @@ server_init(struct server *server)
 		} else {
 			wlr_log(WLR_ERROR, "unable to create color manager");
 		}
-	}
 
-	wlr_color_representation_manager_v1_create_with_renderer(
-	server->wl_display, 1, server->renderer);
+		wlr_color_representation_manager_v1_create_with_renderer(
+			server->wl_display, 1, server->renderer);
+	}
 
 	server->view_tree_always_on_bottom = wlr_scene_tree_create(&server->scene->tree);
 	server->view_tree = wlr_scene_tree_create(&server->scene->tree);
